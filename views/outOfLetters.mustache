@@ -4,20 +4,23 @@
   <h3>Become A Master of The Mystery of Words</h3>
   <br><br>
 
+<!--Check1-->
+<form action= "/outOfLetters/" method="post">
 
-<form action= "/" method="post">
-
-
+<!--Check2-->
   <input type="text" placeholder="Enter a letter" class = "letter" name ="JustALetter"/>
 
+<!--Check3-->
+  <!-- <input type="submit" name="guess" value= "Best Letter"> -->
 
-  <input type="submit" name="guess" value= "Best Letter">
+<!--Doesn't have a play again better-->
+    <input type ="submit" id="play_again" value= "Play Again">
 
-
-  <input type ="submit" name="end_game" value= "Game Over">
+<!--Doesn't have a play again better-->
+  <input type ="submit" id="end_game" value= "Game Over">
 </form>
 
-
+<!--Check 4 -->
 {{ #One_Less_Letter.Assist }}
   {{ . }}
 {{ /One_Less_Letter.Assist }}
@@ -25,10 +28,10 @@
 {{ One_Less_Letter.Answer }}
 {{ /One_Less_Letter.The_End }}
 
-
+<!--check 5-->
 <p>{{ One_Less_Letter.Guesses_Left }}, guesses left.</p>
 
-
+<!--check 6 -->
 <p>{{ #One_Less_Letter.LettersToo }} This selection has been made. {{ /One_Less_Letter.LettersToo }}</p>
 
 <p>My guessed letters {{ One_Less_Letter.Correct_Guesses_Made }} </p>
