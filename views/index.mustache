@@ -1,8 +1,13 @@
 <!Doctype html>
 <html>
+<head>
+<link rel="stylesheet" href="/styles.css">
+</head>
 <body>
   <h3>Become A Master of The Mystery of Words</h3>
-  <br><br>
+  <br>
+
+  <p>You have 8 guesses for the word guess. For each missed guess, you will have {{ One_Less_Letter.Guesses_Left }}, guesses left.</p>
 
 
 <form action= "/" method="post">
@@ -11,11 +16,10 @@
   <input type="text" placeholder="Enter a letter" class = "letter" name ="JustALetter"/>
 
 
-  <input type="submit" name="guess" value= "Best Letter">
-
-
-  <input type ="submit" name="end_game" value= "Game Over">
+  <input type="submit" name="makeAGuess" value= "Enter">
 </form>
+
+
 
 
 {{ #One_Less_Letter.Assist }}
@@ -25,13 +29,18 @@
 {{ One_Less_Letter.Answer }}
 {{ /One_Less_Letter.The_End }}
 
-
-<p>{{ One_Less_Letter.Guesses_Left }}, guesses left.</p>
-
-
-<p>{{ #One_Less_Letter.LettersToo }} This selection has been made. {{ /One_Less_Letter.LettersToo }}</p>
+<h2>{{ #One_Less_Letter.LettersToo }} This selection has been made. {{ /One_Less_Letter.LettersToo }}</h2>
 
 <p>My guessed letters {{ One_Less_Letter.Correct_Guesses_Made }} </p>
+
+<form action= "/newGame" method="post">
+
+  <input type ="submit" name="new_game" value= "New Game">
+</form>
+
+
+
+
 
 
 </body>
